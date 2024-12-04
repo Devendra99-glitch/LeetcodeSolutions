@@ -10,7 +10,7 @@
 public class ValidPalindrome {
     public static void main(String[] args){
         System.out.println(isValidPalindrome("A man, a plan, a canal: Panama"));    // Calling the method with string argument.
-        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
+        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));         // Calling the optimized method with string argument.
     }
 
     // Brute force solution: where we first remove all the non alphanumeric characters by using a for loop to iterate through the string.
@@ -74,6 +74,13 @@ public class ValidPalindrome {
         return true;                // if all conditions are satisfied, this means the string is a palindrome, and the method returns true.
 
     }
+
+    // TIME COMPLEXITY: O(n), where n is the length of the input string.
+    // while loop iterating over the string: O(n)
+    // Everything else from creation of variables to return statement and conditional checks: O(1)
+    // SPACE COMPLEXITY: O(1)
+    // Variables: O(1)
+    // input string is not counted towards space complexity as its part of the input, not the algorithm's space usage.
 
 }
 
