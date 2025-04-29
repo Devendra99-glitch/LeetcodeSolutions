@@ -84,7 +84,13 @@ public class TwoSum {
                                              // indicator.
     }
 
-    //
+    /* TIME COMPLEXITY FOT BRUTE FORCE METHOD
+        O(n^2) because the outer loop runs n times and for each i, the inner loop runs up to n-i-1 times.
+        So total comparisons = n(n-1)/2 -> quadratic growth. as n increases, time increases very fast.
+
+        SPACE COMPLEXITY
+        O(1) No extra data structure are used. just a few variables for indices and the result.
+     */
 
 
     public static int[] twoSumOptimized(int[] nums, int target){
@@ -108,3 +114,11 @@ public class TwoSum {
                                         // that a solution will exist, so this line shouldn't be reached under valid inputs.
     }
 }
+
+/* TIME COMPLEXITY FOR OPTIMIZED SOLUTION
+    O(n) because we go through the array only once. Each lookup (map.containsKey) and insert (map.put) is O(1) on average.
+    So the total time is linear with the size of the input.
+
+    SPACE COMPLEXITY:
+    O(n) because we store each number and its index in a HashMap. In the worst case no solution is found until end, we store all n elements.
+ */
